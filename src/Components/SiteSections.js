@@ -30,7 +30,7 @@ export default function SiteSections({ siteSections }) {
   }, []);
   console.log(content);
   return (
-    <article className="w-screen relative [&>section]:px-5 [&>section]:py-24 flex flex-col">
+    <article className="w-screen relative [&>section]:px-5 [&>section]:py-24 flex flex-col leading-5">
       {/* Fake <header> goes here: */}
       {content &&
         content.props.siteSections
@@ -41,7 +41,7 @@ export default function SiteSections({ siteSections }) {
               key={val.fields.headline}
               className="min-h-screen flex flex-col bg-[#fff] text-primary font-rajdhani relative overflow-hidden"
             >
-              <div className="text-lg lg:text-3xl flex flex-col items-start w-3/4">
+              <div className="text-lg lg:text-3xl flex flex-col items-start w-2/3 outline-dotted outline-2 outline-primary">
                 <h1 className="text-3xl lg:text-5xl">{val.fields.headline}</h1>
                 {documentToReactComponents(val.fields.sectionText)}
               </div>
@@ -52,7 +52,7 @@ export default function SiteSections({ siteSections }) {
                   width="350"
                   height="350"
                   alt={val.fields.bgPicture.description}
-                  className="relative"
+                  className="w-1/3 relative outline-dotted outline-2 outline-primary"
                 />
               )}
             </section>
@@ -69,20 +69,20 @@ export default function SiteSections({ siteSections }) {
               // Tailwind is very bad with reactivity, so below I decided to BRUTEFORCE css-order property:
               style={{ order: `${val.fields.order}` }}
             >
-              <div className="text-lg lg:text-3xl flex flex-col items-start w-3/4">
+              <div className="text-lg lg:text-3xl flex flex-col items-start w-2/3">
                 <h2 className="text-3xl lg:text-5xl">{val.fields.headline}</h2>
                 {documentToReactComponents(val.fields.sectionText)}
               </div>
 
-              <figure className="w-1/3 block rounded-lg rotate-12  absolute top-11 lg:top-36 right-0 lg:right-9 ">
+              <figure className="w-1/3 rounded-lg flex justify-center absolute top-36 right-0 lg:right-2">
                 {val.fields.bgPicture && (
-                  <span className="bg-primary w-fit ">
+                  <span className="lg:bg-primary bg-primary/20 rotate-12 w-fit rounded-lg relative">
                     <Image
                       src={"http:" + `${val.fields.bgPicture.fields.file.url}`}
                       width="350"
                       height="350"
                       alt={val.fields.bgPicture.description}
-                      className="relative rounded-lg lg:opacity-50 opacity-40"
+                      className="relative rounded-lg lg:opacity-50 opacity-10"
                     />
                   </span>
                 )}
