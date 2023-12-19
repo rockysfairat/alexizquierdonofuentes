@@ -30,7 +30,7 @@ export default function SiteSections({ siteSections }) {
   }, []);
   console.log(content);
   return (
-    <article className="w-screen relative p-3 flex flex-col">
+    <article className="w-screen relative [&>section]:px-5 [&>section]:py-24 flex flex-col">
       {/* Fake <header> goes here: */}
       {content &&
         content.props.siteSections
@@ -39,7 +39,7 @@ export default function SiteSections({ siteSections }) {
             <section
               id={val.fields.headline}
               key={val.fields.headline}
-              className="h-[calc(100%-80px)] flex flex-col bg-[#fff] text-primary font-rajdhani relative overflow-hidden"
+              className="min-h-screen flex flex-col bg-[#fff] text-primary font-rajdhani relative overflow-hidden"
             >
               <div className="text-lg lg:text-3xl flex flex-col items-start w-3/4">
                 <h1 className="text-3xl lg:text-5xl">{val.fields.headline}</h1>
@@ -52,7 +52,7 @@ export default function SiteSections({ siteSections }) {
                   width="350"
                   height="350"
                   alt={val.fields.bgPicture.description}
-                  className="absolute bottom-0 left-0"
+                  className="relative"
                 />
               )}
             </section>
@@ -74,15 +74,17 @@ export default function SiteSections({ siteSections }) {
                 {documentToReactComponents(val.fields.sectionText)}
               </div>
 
-              <figure className="w-fit block rounded-lg rotate-12 bg-primary/60 absolute top-11 right-0 lg:right-9 lg:opacity-100 opacity-40">
+              <figure className="w-1/3 block rounded-lg rotate-12  absolute top-11 lg:top-36 right-0 lg:right-9 ">
                 {val.fields.bgPicture && (
-                  <Image
-                    src={"http:" + `${val.fields.bgPicture.fields.file.url}`}
-                    width="350"
-                    height="350"
-                    alt={val.fields.bgPicture.description}
-                    className="relative rounded-lg opacity-20"
-                  />
+                  <span className="bg-primary w-fit ">
+                    <Image
+                      src={"http:" + `${val.fields.bgPicture.fields.file.url}`}
+                      width="350"
+                      height="350"
+                      alt={val.fields.bgPicture.description}
+                      className="relative rounded-lg lg:opacity-50 opacity-40"
+                    />
+                  </span>
                 )}
               </figure>
             </section>
