@@ -10,6 +10,18 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
+      <head>
+        <title>Àlex Izquierdo Nofuentes</title>
+        <meta
+          name="keywords"
+          content="economics, education, behavioral economics, experimental economics, microeconomics, applied economics, Barcelona, university, research, labor market, relationships, friendship, group formation, schools, crime economics, urban, housing prices"
+        />
+        <meta
+          name="description"
+          content="A PhD Candidate in Economics at the University of Barcelona School of Economics, and a pre-doctoral researcher at the Institut d'Economia de Barcelona (IEB) - Àlex Izquierdo Nofuentes"
+        />
+        <meta name="author" content="Àlex Izquierdo Nofuentes" />
+      </head>
       <body>
         <Nav />
         {children}

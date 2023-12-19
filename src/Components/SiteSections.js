@@ -30,18 +30,19 @@ export default function SiteSections({ siteSections }) {
   }, []);
   console.log(content);
   return (
-    <article className="h-fit	 w-screen relative p-3 flex flex-col">
+    <article className="w-screen relative p-3 flex flex-col">
+      {/* Fake <header> goes here: */}
       {content &&
         content.props.siteSections
-          .filter((val) => val.fields.headline == "Welcome to my page!")
+          .filter((val) => val.fields.headline == "Àlex Izquierdo Nofuentes")
           .map((val) => (
             <section
               id={val.fields.headline}
               key={val.fields.headline}
-              className="min-h-screen flex flex-col bg-[#fff] text-primary font-rajdhani relative overflow-hidden"
+              className="h-[calc(100%-80px)] flex flex-col bg-[#fff] text-primary font-rajdhani relative overflow-hidden"
             >
-              <div className="text-3xl flex flex-col items-start w-3/4">
-                <h1 className="text-5xl">{val.fields.headline}</h1>
+              <div className="text-lg lg:text-3xl flex flex-col items-start w-3/4">
+                <h1 className="text-3xl lg:text-5xl">{val.fields.headline}</h1>
                 {documentToReactComponents(val.fields.sectionText)}
               </div>
 
@@ -56,9 +57,10 @@ export default function SiteSections({ siteSections }) {
               )}
             </section>
           ))}
+      {/* Rest of the content with different CSS: */}
       {content &&
         content.props.siteSections
-          .filter((val) => val.fields.headline != "Welcome to my page!")
+          .filter((val) => val.fields.headline != "Àlex Izquierdo Nofuentes")
           .map((val) => (
             <section
               id={val.fields.headline}
@@ -67,8 +69,8 @@ export default function SiteSections({ siteSections }) {
               // Tailwind is very bad with reactivity, so below I decided to BRUTEFORCE css-order property:
               style={{ order: `${val.fields.order}` }}
             >
-              <div className="text-3xl flex flex-col items-start w-3/4">
-                <h2 className="text-5xl">{val.fields.headline}</h2>
+              <div className="text-lg lg:text-3xl flex flex-col items-start w-3/4">
+                <h2 className="text-3xl lg:text-5xl">{val.fields.headline}</h2>
                 {documentToReactComponents(val.fields.sectionText)}
               </div>
 
