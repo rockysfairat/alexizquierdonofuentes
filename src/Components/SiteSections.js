@@ -72,7 +72,9 @@ export default function SiteSections({ siteSections }) {
               style={{ order: `${val.fields.order}` }}
             >
               <div className="text-lg lg:text-3xl flex flex-col items-start w-2/3">
-                <h2 className="text-3xl lg:text-5xl">{val.fields.headline}</h2>
+                <h2 className="text-3xl lg:text-5xl pb-7">
+                  {val.fields.headline}
+                </h2>
                 {documentToReactComponents(val.fields.sectionText)}
               </div>
 
