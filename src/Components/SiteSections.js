@@ -30,7 +30,7 @@ export default function SiteSections({ siteSections }) {
   }, []);
   console.log(content);
   return (
-    <article className="w-screen relative [&>section]:px-5 [&>section]:py-24 flex flex-col leading-5">
+    <article className="w-screen relative flex flex-col leading-5">
       {/* Fake <header> goes here: */}
       {content &&
         content.props.siteSections
@@ -39,20 +39,22 @@ export default function SiteSections({ siteSections }) {
             <section
               id={val.fields.headline}
               key={val.fields.headline}
-              className="min-h-screen flex flex-col bg-[#fff] text-primary font-rajdhani relative overflow-hidden"
+              className="h-screen flex flex-col lg:flex-row justify-evenly pt-14 pb-36 bg-[#fff] text-primary font-rajdhani relative overflow-hidden"
             >
-              <div className="text-lg lg:text-3xl flex flex-col items-start w-2/3 outline-dotted outline-2 outline-primary">
-                <h1 className="text-3xl lg:text-5xl">{val.fields.headline}</h1>
-                {documentToReactComponents(val.fields.sectionText)}
+              <div className="text-lg lg:text-3xl flex flex-col items-start justify-center w-full lg:w-[60%] pb-3 lg:pb-0">
+                <h1 className="text-3xl lg:text-7xl">{val.fields.headline}</h1>
+                <div className="pt-0 lg:pt-9">
+                  {documentToReactComponents(val.fields.sectionText)}
+                </div>
               </div>
 
               {val.fields.bgPicture && (
                 <Image
                   src={"http:" + `${val.fields.bgPicture.fields.file.url}`}
-                  width="350"
-                  height="350"
+                  width="800"
+                  height="800"
                   alt={val.fields.bgPicture.description}
-                  className="w-1/3 relative outline-dotted outline-2 outline-primary"
+                  className="w-full lg:w-[30%] relative rounded-lg object-cover shadow-md"
                 />
               )}
             </section>
@@ -65,7 +67,7 @@ export default function SiteSections({ siteSections }) {
             <section
               id={val.fields.headline}
               key={val.fields.headline}
-              className="min-h-screen flex flex-col bg-light text-primary font-rajdhani relative overflow-hidden"
+              className="min-h-screen flex flex-col bg-light text-primary font-rajdhani relative overflow-hidden px-5 py-24"
               // Tailwind is very bad with reactivity, so below I decided to BRUTEFORCE css-order property:
               style={{ order: `${val.fields.order}` }}
             >

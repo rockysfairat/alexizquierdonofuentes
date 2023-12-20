@@ -1,20 +1,18 @@
-import Link from "next/link";
-
 export default function Footer() {
   return (
     <footer className="w-full bg-primary text-light font-rajdhani flex justify-between py-1">
       <ul className="w-1/3 pl-[20px]">
         <li>
-          <Link href="#CV">CV</Link>
+          <a href="Research">Research</a>
         </li>
         <li>
-          <Link href="Research">Research</Link>
+          <a href="#CV">CV</a>
         </li>
         <li>
-          <Link href="#Teaching">Teaching</Link>
+          <a href="#Teaching">Teaching</a>
         </li>
         <li>
-          <Link href="#Links">Links</Link>
+          <a href="#Links">Links</a>
         </li>
       </ul>
       <span className="w-1/3 flex flex-col justify-end items-end pr-[20px]">

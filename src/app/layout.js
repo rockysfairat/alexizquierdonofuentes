@@ -9,12 +9,12 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
+    <html lang="en" className="scroll-smooth">
       <head>
         <title>Àlex Izquierdo Nofuentes</title>
         <meta
           name="keywords"
-          content="economics, education, behavioral economics, experimental economics, microeconomics, applied economics, Barcelona, university, research, labor market, relationships, friendship, group formation, schools, crime economics, urban, housing prices"
+          content="Alex Izquierdo Nofuentes, economics, education, behavioral economics, experimental economics, microeconomics, applied economics, Barcelona, university, research, labor market, relationships, friendship, group formation, schools, crime economics, urban, housing prices"
         />
         <meta
           name="description"
@@ -22,7 +22,7 @@ export default function RootLayout({ children }) {
         />
         <meta name="author" content="Àlex Izquierdo Nofuentes" />
       </head>
-      <body>
+      <body className="overflow-x-hidden">
         <Nav />
         {children}
         <Footer />

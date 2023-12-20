@@ -1,7 +1,6 @@
 "use client";
 
 import { useState } from "react";
-import Link from "next/link";
 import Image from "next/image";
 
 export default function Nav() {
@@ -23,16 +22,16 @@ export default function Nav() {
       />
       <ul className="WIDESCREEN w-fit hidden lg:flex list-none text-light text-2xl [&>li]:p-4 items-center">
         <li>
-          <Link href="#CV">CV</Link>
+          <a href="#Research">Research</a>
         </li>
         <li>
-          <Link href="#Research">Research</Link>
+          <a href="#CV">CV</a>
         </li>
         <li>
-          <Link href="#Teaching">Teaching</Link>
+          <a href="#Teaching">Teaching</a>
         </li>
         <li>
-          <Link href="#Links">Links</Link>
+          <a href="#Links">Links</a>
         </li>
       </ul>
       <div
@@ -56,16 +55,16 @@ export default function Nav() {
           X
         </span>
         <li onClick={toggleMenu}>
-          <Link href="#CV">CV</Link>
+          <a href="#Research">Research</a>
         </li>
         <li onClick={toggleMenu}>
-          <Link href="#Research">Research</Link>
+          <a href="#CV">CV</a>
         </li>
         <li onClick={toggleMenu}>
-          <Link href="#Teaching">Teaching</Link>
+          <a href="#Teaching">Teaching</a>
         </li>
         <li onClick={toggleMenu}>
-          <Link href="#Links">Links</Link>
+          <a href="#Links">Links</a>
         </li>
       </ul>
     </nav>
