@@ -78,15 +78,15 @@ export default function SiteSections({ siteSections }) {
                 {documentToReactComponents(val.fields.sectionText)}
               </div>
 
-              <figure className="w-1/3 rounded-lg flex justify-center absolute top-36 right-0 lg:right-2">
+              <figure className="w-[250px] lg:w-[600px] min-h-fit rounded-lg flex justify-center absolute top-[200px] right-[-80px] lg:right-[-150px]">
                 {val.fields.bgPicture && (
-                  <span className="lg:bg-primary bg-primary/20 rotate-12 w-fit rounded-lg relative">
+                  <span className="bg-primary/5 rotate-12 w-fit h-fit rounded-lg relative">
                     <Image
                       src={"http:" + `${val.fields.bgPicture.fields.file.url}`}
-                      width="350"
-                      height="350"
+                      width="500"
+                      height="500"
                       alt={val.fields.bgPicture.description}
-                      className="relative rounded-lg lg:opacity-50 opacity-10"
+                      className="relative rounded-lg lg:opacity-10 opacity-5"
                     />
                   </span>
                 )}
