@@ -12,7 +12,7 @@ export default function Footer() {
           <a href="#Teaching">Teaching</a>
         </li>
         <li>
-          <a href="#Links">Links</a>
+          <a href="#Resources">Resources</a>
         </li>
       </ul>
       <span className="w-1/3 flex flex-col justify-end items-end pr-[20px]">

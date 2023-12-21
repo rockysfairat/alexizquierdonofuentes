@@ -31,7 +31,7 @@ export default function Nav() {
           <a href="#Teaching">Teaching</a>
         </li>
         <li>
-          <a href="#Links">Links</a>
+          <a href="#Resources">Resources</a>
         </li>
       </ul>
       <div
@@ -64,7 +64,7 @@ export default function Nav() {
           <a href="#Teaching">Teaching</a>
         </li>
         <li onClick={toggleMenu}>
-          <a href="#Links">Links</a>
+          <a href="#Resources">Resources</a>
         </li>
       </ul>
     </nav>
