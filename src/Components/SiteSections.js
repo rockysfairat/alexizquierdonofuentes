@@ -39,9 +39,9 @@ export default function SiteSections({ siteSections }) {
             <section
               id={val.fields.headline}
               key={val.fields.headline}
-              className="h-screen flex flex-col lg:flex-row justify-evenly px-5 lg:px-0 pt-14 pb-36 bg-[#fff] text-primary font-rajdhani relative overflow-hidden"
+              className="lg:h-screen h-min flex flex-col lg:flex-row justify-evenly px-5 lg:px-0 pb-36 bg-[#fff] text-primary font-rajdhani relative"
             >
-              <div className="text-lg lg:text-3xl flex flex-col items-start justify-center w-full lg:w-[60%] pb-3 lg:pb-0">
+              <div className="text-lg xl:text-3xl flex flex-col items-start justify-center w-full lg:w-[60%] pb-3 lg:pb-0">
                 <h1 className="text-3xl lg:text-7xl">{val.fields.headline}</h1>
                 <div className="pt-0 lg:pt-9">
                   {documentToReactComponents(val.fields.sectionText)}
@@ -78,7 +78,7 @@ export default function SiteSections({ siteSections }) {
                 {documentToReactComponents(val.fields.sectionText)}
               </div>
 
-              <figure className="w-[250px] lg:w-[600px] min-h-fit rounded-lg flex justify-center absolute top-[200px] right-[-80px] lg:right-[-150px]">
+              <figure className="w-[250px] lg:w-1/3 min-h-fit rounded-lg flex justify-center absolute top-[200px] right-[-80px] lg:right-[-150px]">
                 {val.fields.bgPicture && (
                   <span className="bg-primary/5 rotate-12 w-fit h-fit rounded-lg relative">
                     <Image
