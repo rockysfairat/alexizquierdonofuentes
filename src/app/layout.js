@@ -31,10 +31,7 @@ export default function RootLayout({ children }) {
           property="og:description"
           content="A PhD Candidate in Economics at the University of Barcelona School of Economics, and a pre-doctoral researcher at the Institut d'Economia de Barcelona (IEB) - Àlex Izquierdo Nofuentes"
         />
-        <meta
-          property="og:url"
-          content="https://adorable-genie-d25230.netlify.app/"
-        />
+        <meta property="og:url" content="https://alexizquierdo.eu/" />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="627" />
         <meta property="og:type" content="website" />
