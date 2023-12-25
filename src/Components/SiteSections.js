@@ -39,7 +39,7 @@ export default function SiteSections({ siteSections }) {
             <section
               id={val.fields.headline}
               key={val.fields.headline}
-              className="lg:h-screen h-min flex flex-col lg:flex-row justify-evenly px-5 pt-7 lg:px-0 pb-36 bg-[#fff] text-primary font-rajdhani relative lopsidedScreen:flex-row  lopsidedScreen:pt-9 lopsidedScreen:h-screen"
+              className="lg:h-screen h-min flex flex-col lg:flex-row justify-evenly px-5 pt-7 lg:pt-0 lg:px-0 pb-36 bg-[#fff] text-primary font-rajdhani relative lopsidedScreen:flex-row  lopsidedScreen:pt-9 lopsidedScreen:h-screen"
             >
               <div className="text-lg xl:text-3xl flex flex-col items-start justify-center w-full lg:w-[60%] pb-3 lg:pb-0 lopsidedScreen:pr-4">
                 <h1 className="text-3xl lg:text-7xl">{val.fields.headline}</h1>
