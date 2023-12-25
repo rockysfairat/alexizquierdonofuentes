@@ -16,6 +16,10 @@ module.exports = {
         rajdhani: ["Rajdhani", "sans-serif"],
         bitter: ["Bitter", "serif"],
       },
+      screens: {
+        lopsidedScreen: { raw: "(max-height: 500px)" },
+        // => @media (max-height: 500px) { ... }
+      },
     },
   },
   plugins: [],
