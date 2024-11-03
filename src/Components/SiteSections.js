@@ -79,7 +79,7 @@ export default function SiteSections({ siteSections }) {
               // Tailwind is very bad with reactivity, so below I decided to BRUTEFORCE css-order property:
               style={{ order: `${val.fields.order}` }}
             >
-              <div className="text-lg lg:text-3xl flex flex-col items-start w-2/3">
+              <div className="text-lg lg:text-3xl flex flex-col items-start w-2/3 [&>p]:mb-5 [&>ul]:mb-2 [&>ul]:mt-2 [&>ul]:space-y-4 [&>h3]:mb-2 [&>a]:text-hyperlinks">
                 <h2 className="text-3xl lg:text-5xl pb-7">
                   {val.fields.headline}
                 </h2>
