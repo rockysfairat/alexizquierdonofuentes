@@ -28,7 +28,15 @@ export default function SiteSections({ siteSections }) {
   useEffect(() => {
     data.then((values) => setContent(values));
   }, []);
-  console.log(content);
+
+  const options = {
+    renderText: (text) => {
+      return text.split("\n").reduce((children, textSegment, index) => {
+        return [...children, index > 0 && <br key={index} />, textSegment];
+      }, []);
+    },
+  };
+
   return (
     <article className="w-screen relative flex flex-col leading-5">
       {/* Fake <header> goes here: */}
@@ -43,7 +51,7 @@ export default function SiteSections({ siteSections }) {
             >
               <div className="text-lg xl:text-3xl flex flex-col items-start justify-center w-full lg:w-[60%] pb-3 lg:pb-0 lopsidedScreen:pr-4">
                 <h1 className="text-3xl lg:text-7xl">{val.fields.headline}</h1>
-                <div className="pt-0 lg:pt-9 lopsidedScreen:text-md">
+                <div className="pt-0 lg:pt-9 lopsidedScreen:text-md [&>p]:mb-4 lg:[&>p]:mb-6">
                   {documentToReactComponents(val.fields.sectionText)}
                 </div>
               </div>
@@ -75,7 +83,7 @@ export default function SiteSections({ siteSections }) {
                 <h2 className="text-3xl lg:text-5xl pb-7">
                   {val.fields.headline}
                 </h2>
-                {documentToReactComponents(val.fields.sectionText)}
+                {documentToReactComponents(val.fields.sectionText, options)}
               </div>
 
               <figure className="w-[250px] lg:w-1/3 min-h-fit rounded-lg flex justify-center absolute top-[200px] right-[-80px] lg:right-[-150px]">
