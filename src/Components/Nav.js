@@ -20,18 +20,26 @@ export default function Nav() {
         alt="University logo"
         className="hidden lg:block py-2"
       />
-      <ul className="WIDESCREEN w-fit hidden lg:flex list-none text-light text-2xl [&>li]:p-4 items-center">
+      <ul className="WIDESCREEN w-fit hidden lg:flex list-none text-2xl [&>li]:p-4 items-center">
         <li>
-          <a href="#Research">Research</a>
+          <a href="#Research" className="text-light no-underline">
+            Research
+          </a>
         </li>
         <li>
-          <a href="#CV">CV</a>
+          <a href="#CV" className="text-light no-underline">
+            CV
+          </a>
         </li>
         <li>
-          <a href="#Teaching">Teaching</a>
+          <a href="#Teaching" className="text-light no-underline">
+            Teaching
+          </a>
         </li>
         <li>
-          <a href="#Resources">Resources</a>
+          <a href="#Resources" className="text-light no-underline">
+            Resources
+          </a>
         </li>
       </ul>
       <div
@@ -55,16 +63,24 @@ export default function Nav() {
           X
         </span>
         <li onClick={toggleMenu}>
-          <a href="#Research">Research</a>
+          <a href="#Research" className="text-light no-underline">
+            Research
+          </a>
         </li>
         <li onClick={toggleMenu}>
-          <a href="#CV">CV</a>
+          <a href="#CV" className="text-light no-underline">
+            CV
+          </a>
         </li>
         <li onClick={toggleMenu}>
-          <a href="#Teaching">Teaching</a>
+          <a href="#Teaching" className="text-light no-underline">
+            Teaching
+          </a>
         </li>
         <li onClick={toggleMenu}>
-          <a href="#Resources">Resources</a>
+          <a href="#Resources" className="text-light no-underline">
+            Resources
+          </a>
         </li>
       </ul>
     </nav>
